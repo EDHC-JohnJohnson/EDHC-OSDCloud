@@ -2,8 +2,8 @@ Write-Host  -ForegroundColor Cyan "Starting EDHC Custom OSDCloud ..."
 cls
 Write-Host "======================== Menu =========================" -ForegroundColor Blue
 Write-Host "=======================================================" -ForegroundColor Blue
-Write-Host "1: Manual CLI"-ForegroundColor Cyan
-Write-Host "2: Manual GUI"-ForegroundColor Cyan
+Write-Host "1: Manual GUI"-ForegroundColor Cyan
+Write-Host "2: Manual CLI"-ForegroundColor Cyan
 Write-Host "3: Zero-Touch Win11 23H2 | English | Enterprise" -ForegroundColor Cyan
 Write-Host "4: Exit"-ForegroundColor Cyan
 
