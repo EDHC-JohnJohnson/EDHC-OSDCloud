@@ -23,3 +23,5 @@ switch ($input)
 }
 
 wpeutil reboot
+
+#Start-OOBEDeploy -AddNetFX3 -RemoveAppx .\AppsToRemove.txt -SetEdition Enterprise -UpdateDrivers -UpdateWindows
