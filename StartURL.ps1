@@ -1,7 +1,10 @@
 Write-Host  -ForegroundColor Cyan "Starting EDHC Custom OSDCloud ..."
 cls
-Write-Host "======================== Menu =========================" -ForegroundColor Blue
+
+Write-Host "======================================================="
+Write-Host "=================== EDHC OSD Cloud ====================" -ForegroundColor Blue
 Write-Host "=======================================================" -ForegroundColor Blue
+Write-Host ""
 Write-Host "1: Manual GUI"-ForegroundColor Cyan
 Write-Host "2: Manual CLI"-ForegroundColor Cyan
 Write-Host "3: Zero-Touch Win11 23H2 | English | Enterprise" -ForegroundColor Cyan
@@ -23,5 +26,3 @@ switch ($input)
 }
 
 wpeutil reboot
-
-#Start-OOBEDeploy -AddNetFX3 -RemoveAppx .\AppsToRemove.txt -SetEdition Enterprise -UpdateDrivers -UpdateWindows
