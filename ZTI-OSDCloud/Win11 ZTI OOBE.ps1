@@ -19,7 +19,7 @@ Import-Module OSD -Force
 #   [OS] Params and Start-OSDCloud
 #=======================================================================
 
-<# 
+
 $Params = @{
     OSVersion = "Windows 11"
     OSBuild = "23H2"
@@ -31,9 +31,7 @@ $Params = @{
 }
 
 Start-OSDCloud @Params
-#>
 
-Start-OSDCloud -OSLanguage en-us -OSBuild 23H2 -OSEdition Pro -OSLicense Retail -ZTI -Firmware
 
 #================================================
 #  [PostOS] OOBEDeploy Configuration
@@ -48,100 +46,100 @@ $OOBEDeployJson = @'
                       "IsPresent":  false
                   },
     "RemoveAppx":  [
-                    "Clipchamp.Clipchamp"
-                    "Microsoft.3DBuilder"
-                    "Microsoft.549981C3F5F10"
-                    'Microsoft.BingFinance'
-                    'Microsoft.BingFoodAndDrink'       
-                    'Microsoft.BingHealthAndFitness'   
-                    'Microsoft.BingNews'
-                    'Microsoft.BingSports'
-                    'Microsoft.BingTranslator'
-                    'Microsoft.BingTravel'
-                    'Microsoft.BingWeather'
-                    'Microsoft.Messaging'
-                    'Microsoft.Microsoft3DViewer'
-                    'Microsoft.MicrosoftOfficeHub'
-                    'Microsoft.MicrosoftPowerBIForWindows'
-                    'Microsoft.MicrosoftSolitaireCollection'
-                    'Microsoft.MixedReality.Portal'
-                    'Microsoft.NetworkSpeedTest'
-                    'Microsoft.News'
-                    'Microsoft.Office.OneNote'
-                    'Microsoft.Office.Sway'
-                    'Microsoft.OneConnect'
-                    'Microsoft.SkypeApp'
-                    'Microsoft.Todos'
-                    'Microsoft.WindowsAlarms'
-                    'Microsoft.WindowsFeedbackHub'
-                    'Microsoft.WindowsMaps'
-                    'Microsoft.WindowsSoundRecorder'
-                    'Microsoft.XboxApp'
-                    'Microsoft.ZuneVideo'
-                    'MicrosoftTeams'
-                    'ACGMediaPlayer'
-                    'ActiproSoftwareLLC'
-                    'AdobeSystemsIncorporated.AdobePhotoshopExpress'
-                    'Amazon.com.Amazon'
-                    'AmazonVideo.PrimeVideo'
-                    'Asphalt8Airborne '
-                    'AutodeskSketchBook'
-                    'CaesarsSlotsFreeCasino'
-                    'COOKINGFEVER'
-                    'CyberLinkMediaSuiteEssentials'
-                    'DisneyMagicKingdoms'
-                    'Disney'
-                    'Dolby'
-                    'DrawboardPDF'
-                    'Duolingo-LearnLanguagesforFree'
-                    'EclipseManager'
-                    'Facebook'
-                    'FarmVille2CountryEscape'
-                    'fitbit'
-                    'Flipboard'
-                    'HiddenCity'
-                    'HULULLC.HULUPLUS'
-                    'iHeartRadio'
-                    'Instagram'
-                    'king.com.BubbleWitch3Saga'
-                    'king.com.CandyCrushSaga'
-                    'king.com.CandyCrushSodaSaga'
-                    'LinkedInforWindows'
-                    'MarchofEmpires'
-                    'Netflix'
-                    'NYTCrossword'
-                    'OneCalendar'
-                    'PandoraMediaInc'
-                    'PhototasticCollage'
-                    'PicsArt-PhotoStudio'
-                    'Plex'
-                    'PolarrPhotoEditorAcademicEdition'
-                    'Royal Revolt'
-                    'Shazam'
-                    'Sidia.LiveWallpaper'
-                    'SlingTV'
-                    'Speed Test'
-                    'Spotify'
-                    'TikTok'
-                    'TuneInRadio'
-                    'Twitter'
-                    'Viber'
-                    'WinZipUniversal'
-                    'Wunderlist'
-                    'XING'                    
-                    'Microsoft.OutlookForWindows'            
-                    'Microsoft.People'                       
-                    'Microsoft.PowerAutomateDesktop'
-                    'Microsoft.Whiteboard'                   
-                    'Microsoft.windowscommunicationsapps'   
-                    'Microsoft.Xbox.TCUI'                    
-                    'Microsoft.XboxIdentityProvider'        
-                    'Microsoft.XboxSpeechToTextOverlay'      
-                    'Microsoft.YourPhone'                   
-                    'Microsoft.ZuneMusic'                   
-                    'Microsoft.GamingApp'            # 
-                    'Microsoft.XboxGameOverlay'            
-                    'Microsoft.XboxGamingOverlay'
+                    "Clipchamp.Clipchamp",
+                    "Microsoft.3DBuilder",
+                    "Microsoft.549981C3F5F10",
+                    "Microsoft.BingFinance",
+                    "Microsoft.BingFoodAndDrink'      ",
+                    "Microsoft.BingHealthAndFitness'  ",
+                    "Microsoft.BingNews",
+                    "Microsoft.BingSports",
+                    "Microsoft.BingTranslator",
+                    "Microsoft.BingTravel",
+                    "Microsoft.BingWeather",
+                    "Microsoft.Messaging",
+                    "Microsoft.Microsoft3DViewer",
+                    "Microsoft.MicrosoftOfficeHub",
+                    "Microsoft.MicrosoftPowerBIForWindows",
+                    "Microsoft.MicrosoftSolitaireCollection",
+                    "Microsoft.MixedReality.Portal",
+                    "Microsoft.NetworkSpeedTest",
+                    "Microsoft.News",
+                    "Microsoft.Office.OneNote",
+                    "Microsoft.Office.Sway",
+                    "Microsoft.OneConnect",
+                    "Microsoft.SkypeApp",
+                    "Microsoft.Todos",
+                    "Microsoft.WindowsAlarms",
+                    "Microsoft.WindowsFeedbackHub",
+                    "Microsoft.WindowsMaps",
+                    "Microsoft.WindowsSoundRecorder",
+                    "Microsoft.XboxApp",
+                    "Microsoft.ZuneVideo",
+                    "MicrosoftTeams",
+                    "ACGMediaPlayer",
+                    "ActiproSoftwareLLC",
+                    "AdobeSystemsIncorporated.AdobePhotoshopExpress",
+                    "Amazon.com.Amazon",
+                    "AmazonVideo.PrimeVideo",
+                    "Asphalt8Airborne ",
+                    "AutodeskSketchBook",
+                    "CaesarsSlotsFreeCasino",
+                    "COOKINGFEVER",
+                    "CyberLinkMediaSuiteEssentials",
+                    "DisneyMagicKingdoms",
+                    "Disney",
+                    "Dolby",
+                    "DrawboardPDF",
+                    "Duolingo-LearnLanguagesforFree",
+                    "EclipseManager",
+                    "Facebook",
+                    "FarmVille2CountryEscape",
+                    "fitbit",
+                    "Flipboard",
+                    "HiddenCity",
+                    "HULULLC.HULUPLUS",
+                    "iHeartRadio",
+                    "Instagram",
+                    "king.com.BubbleWitch3Saga",
+                    "king.com.CandyCrushSaga",
+                    "king.com.CandyCrushSodaSaga",
+                    "LinkedInforWindows",
+                    "MarchofEmpires",
+                    "Netflix",
+                    "NYTCrossword",
+                    "OneCalendar",
+                    "PandoraMediaInc",
+                    "PhototasticCollage",
+                    "PicsArt-PhotoStudio",
+                    "Plex",
+                    "PolarrPhotoEditorAcademicEdition",
+                    "Royal Revolt",
+                    "Shazam",
+                    "Sidia.LiveWallpaper",
+                    "SlingTV",
+                    "Speed Test",
+                    "Spotify",
+                    "TikTok",
+                    "TuneInRadio",
+                    "Twitter",
+                    "Viber",
+                    "WinZipUniversal",
+                    "Wunderlist",
+                    "XING",
+                    "Microsoft.OutlookForWindows",
+                    "Microsoft.People",
+                    "Microsoft.PowerAutomateDesktop",
+                    "Microsoft.Whiteboard",
+                    "Microsoft.windowscommunicationsapps",
+                    "Microsoft.Xbox.TCUI",
+                    "Microsoft.XboxIdentityProvider",
+                    "Microsoft.XboxSpeechToTextOverlay",
+                    "Microsoft.YourPhone",
+                    "Microsoft.ZuneMusic",
+                    "Microsoft.GamingApp",
+                    "Microsoft.XboxGameOverlay",
+                    "Microsoft.XboxGamingOverlay",
                    ],
     "UpdateDrivers":  {
                           "IsPresent":  true
