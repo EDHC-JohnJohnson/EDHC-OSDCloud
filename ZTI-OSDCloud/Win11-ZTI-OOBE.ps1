@@ -32,7 +32,6 @@ $Params = @{
 
 Start-OSDCloud @Params
 
-<#
 
 #================================================
 #  [PostOS] OOBEDeploy Configuration
@@ -220,8 +219,6 @@ powershell.exe -Command Set-ExecutionPolicy RemoteSigned -Force
 powershell.exe -Command "& {IEX (IRM https://github.com/EDHC-JohnJohnson/EDHC-OSDCloud/raw/main/ZTI-OSDCloud/OOOBETasks.ps1)}"
 '@
 $SetupCompleteCMD | Out-File -FilePath 'C:\Windows\Setup\Scripts\SetupComplete.cmd' -Encoding ascii -Force
-
-#>
 
 #=======================================================================
 #   Restart-Computer
