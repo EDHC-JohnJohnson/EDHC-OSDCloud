@@ -201,10 +201,11 @@ $OOBECMD = @'
 PowerShell -NoL -Com Set-ExecutionPolicy RemoteSigned -Force
 Set Path = %PATH%;C:\Program Files\WindowsPowerShell\Scripts
 Start /Wait PowerShell -NoL -C Install-Module AutopilotOOBE -Force -Verbose
+Start /Wait PowerShell -NoL -C Import-Module OSD -Force -Verbose
 Start /Wait PowerShell -NoL -C Install-Module OSD -Force -Verbose
 Start /Wait PowerShell -NoL -C Invoke-WebPSScript https://github.com/EDHC-JohnJohnson/EDHC-OSDCloud/raw/main/ZTI-OSDCloud/Set-KeyboardLanguage.ps1
 Start /Wait PowerShell -NoL -C Invoke-WebPSScript https://github.com/EDHC-JohnJohnson/EDHC-OSDCloud/raw/main/ZTI-OSDCloud/Install-EmbeddedProductKey.ps1
-Start /Wait PowerShell -NoL -C Start-OOBEDeploy
+Start /Wait PowerShell -NoL -C Start-OOBEDeploy -AddNetFX3 -RemoveAppx  -SetEdition Pro -UpdateDrivers -UpdateWindows
 Start /Wait PowerShell -NoL -C Invoke-WebPSScript https://github.com/EDHC-JohnJohnson/EDHC-OSDCloud/raw/main/ZTI-OSDCloud/CleanUp.ps1
 Start /Wait PowerShell -NoL -C Restart-Computer -Force
 '@
