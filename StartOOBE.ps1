@@ -3,4 +3,4 @@
 Import-Module OSD -Force
 Install-Module OSD -Force
 
-Start-OOBEDeploy -AddNetFX3 -RemoveAppx  -SetEdition Enterprise -UpdateDrivers -UpdateWindows
+Start-OOBEDeploy -AddNetFX3 -RemoveAppx  -SetEdition Pro -UpdateDrivers -UpdateWindows
