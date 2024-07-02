@@ -27,7 +27,7 @@ Write-Host -ForegroundColor DarkGray "Executing Product Key Script"
 Start-Process PowerShell -ArgumentList "-NoL -C Invoke-WebPSScript https://github.com/EDHC-JohnJohnson/EDHC-OSDCloud/raw/main/ZTI-OSDCloud/Install-EmbeddedProductKey.ps1" -Wait
 
 Write-Host -ForegroundColor DarkGray "Executing OOBEDeploy Script fomr OSDCloud Module"
-Start-Process PowerShell -ArgumentList "-NoL -C Start-OOBEDeploy" -Wait
+Start-Process PowerShell -ArgumentList "-NoL -C Start-OOBEDeploy -AddNetFX3 -RemoveAppx  -SetEdition Pro -UpdateDrivers -UpdateWindows" -Wait
 
 Write-Host -ForegroundColor DarkGray "Executing Cleanup Script"
 Start-Process PowerShell -ArgumentList "-NoL -C Invoke-WebPSScript https://github.com/EDHC-JohnJohnson/EDHC-OSDCloud/raw/main/ZTI-OSDCloud/CleanUp.ps1" -Wait
